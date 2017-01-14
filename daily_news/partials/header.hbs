@@ -1,0 +1,29 @@
+<div class="page-wrap">
+	<!-- start header -->
+	<header class="main-header">
+		<nav class="navbar navbar-default" id="main-navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a href="#" id="search-open"><i class="fa fa-search"></i></a>
+				</div>
+				{{navigation}}
+			</div>
+		</nav>
+		<div class="container logo-wrap">
+			<!-- start logo -->
+			{{#if @blog.logo}}
+			<a class="logo image-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}"></a>
+			{{else}}
+			<a class="logo text-logo" href="{{@blog.url}}">{{@blog.title}}</a>
+			{{/if}}
+			<!-- end logo -->
+		</div>
+		{{> secondary-bar}}
+	</header>
+	<!-- end header -->

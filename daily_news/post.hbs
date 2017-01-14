@@ -1,0 +1,56 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="row default-layout">
+			{{#post}}
+			<!-- start post -->
+			<article class="col-sm-12 post-wrap full-post">
+				<div class="featured-media">
+					{{#if image}}
+						<div class="image-container">
+							<img src="{{image}}" alt="{{{title}}}">
+						</div>
+					{{/if}}
+					{{#if "tags"}}
+					<div class="tag-list">{{tags separator=""}}</div>
+					{{/if}}
+					{{#if featured}}
+                    <div class="featured"><i class="fa fa-star"></i>Featured</div>
+                    {{/if}}
+				</div>
+				
+				<h1 class="title">{{{title}}}</h1>
+				<div class="post-meta">
+					{{#author}}
+					<span class="author">
+	                    <i class="fa fa-user"></i>
+	                    <a href="{{url}}">{{name}}</a>
+	                </span>
+	                {{/author}}
+	                <span class="date">
+	                    <i class="fa fa-calendar-o"></i>
+	                    {{date format="MMM DD, YYYY"}}
+	                </span>
+	                <span class="comment">
+	                    <i class="fa fa-comment-o"></i>
+	                    <a href="{{url}}#disqus_thread">0 Comments</a>
+	                </span>
+				</div>
+				<div class="post-entry">
+					{{content}}
+				</div>
+			</article>
+			<!-- end post -->
+			{{> share}}
+			{{> about-author}}
+			{{> prev-next}}
+			{{/post}}
+			{{> comment}}
+			</div>
+		</div>
+		{{> sidebar}}
+	</div>
+</div>

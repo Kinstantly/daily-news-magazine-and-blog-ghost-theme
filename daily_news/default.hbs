@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{{! Document Settings }}
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	{{! Page Meta }}
+	<title>{{meta_title}}</title>
+	<meta name="description" content="{{meta_description}}" />
+	<meta name="keywords" content="">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+	<!-- fav icons -->
+	<link rel="shortcut icon" href="{{asset "images/favicon.ico"}}">
+	<link rel="apple-touch-icon" href="{{asset "images/apple-touch-icon.png"}}">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{asset "images/apple-touch-icon-72x72.png"}}">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{asset "images/apple-touch-icon-114x114.png"}}">
+	<!-- stylesheets -->
+	{{! Styles'n'Scripts }}
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{{asset "css/bootstrap.min.css"}}">
+	<link rel="stylesheet" href="{{asset "css/font-awesome.min.css"}}">
+	<link rel="stylesheet" href="{{asset "css/owl.carousel.css"}}">
+	<link rel="stylesheet" href="{{asset "css/owl.transitions.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "css/hl-styles/monokai_sublime.css"}}">
+	<link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}">
+	{{! inserting theme config partial}}
+	{{> config}}
+	{{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}" {{#if @blog.cover}} style="background-image: url({{@blog.cover}});"{{/if}}>
+	{{! insert header partial}}
+	{{> header}}
+
+	{{{body}}}
+
+	{{! insert footer partial}}
+	{{> footer}}
+</body>
+</html>

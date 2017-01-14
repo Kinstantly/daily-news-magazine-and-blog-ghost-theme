@@ -1,0 +1,351 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Daily News-1.2 - User Documentation</title>
+<link href="http://fonts.googleapis.com/css?family=Raleway:700,300" rel="stylesheet"
+        type="text/css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/prettify.css">
+</head>
+<body>
+<nav>
+  <div class="container">
+    <h1>GBJ Solution</h1>
+    <div id="menu">
+      <ul class="toplinks">
+        <li><a href="http://daily-news.gbjsolution.com/">Theme Demo</a></li>
+        <li><a href="http://themeforest.net/user/GBJsolution/portfolio/?ref=gbjsolution">Themeforest portfolio</a></li>
+        <li><a href="http://graphicriver.net/user/GBJsolution/portfolio/?ref=gbjsolution">Graphicriver Portfolio</a></li>
+      </ul>
+    </div>
+    <a id="menu-toggle" href="#" class=" ">&#9776;</a> </div>
+</nav>
+<header>
+  <div class="container">
+    <h2 class="docs-header">Daily News-1.2 - User Documentation</h2>
+  </div>
+</header>
+<section class="thanks">
+  <div class="container">
+    <h3>Thank you vey Much!</h3>
+      <p>
+        Thank you very much for purchasing this theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/gbjsolution/?ref=gbjsolution">here.</a> Thanks so much!
+      </p>
+    <h3>Please Rate this theme.</h3>
+    <p>
+      If you like this theme then consider to rate it. If you are going to to rate this below then please consider to tell me the reason before rating it. I will do my best to help you.
+      you can send me a message <a href="http://themeforest.net/user/gbjsolution/?ref=gbjsolution">here.</a> To rate this item go <a href="http://themeforest.net/downloads">here</a>.
+    </p>
+  </div>
+  <hr>
+</section>
+<section>
+  <div class="container">
+    <!-- sidebar menue start -->
+    <ul class="docs-nav" id="menu-left">
+      <li><strong>Getting Started</strong></li>
+      <li><a href="#before_start" class=" ">Before You Start</a></li>
+      <li><a href="#option_config" class=" ">Theme Option</a></li>
+      <li><a href="#social_links">Adding Soclial Links</a></li>
+      <li><a href="#widgets">Sidebar Widgets</a></li>
+      <li><a href="#twitter-settings">Twitter Widget Settings</a></li>
+      <li><a href="#installation" class=" ">Installation</a></li>
+      <li><a href="#navigation" class=" ">Navigation Links</a></li>
+      <li><a href="#featured_media" class=" ">Featured Media In Post</a></li>
+      <li class="separator"></li>
+      <li><strong>Theme Customization</strong></li>
+      <li><a href="#change_color" class=" ">How to Change Color</a></li>
+      <li><a href="#changelog">Changelog</a></li>
+      <li class="separator"></li>
+      <li><strong>Sources and Credits</strong></li>
+      <li><a href="#font" class=" ">Font</a></li>
+      <li><a href="#scripts" class=" ">Scripts</a></li>
+      <li><a href="#images" class=" ">Images</a></li>
+    </ul>
+    <!-- sidebar menue end -->
+    <div class="docs-content">
+      <h2>Getting Started</h2>
+      <h3 id="before_start">Before you start</h3>
+      <p>This documentation is intended to help you properly install and configure the theme on your ghost blog. <strong>Make sure to keep a backup before any modification</strong>.
+      </p>
+      <p>If you are new to Ghost then some links may be useful to know about ghost itself:</p>
+      <ul>
+        <li>Ghost Official documentation: <a href="http://docs.ghost.org/">http://docs.ghost.org/</a></li>
+        <li>Ghost Forum: <a href="https://ghost.org/forum/">https://ghost.org/forum/</a></li>
+      </ul>
+      <h2>Configuration &amp; Installation</h2>
+      <p>To use the theme extract the main downloaded zip file and first of all make a backup of the theme main folder. theme backup is recomended becuse you can always get back to the fresh copy.</p>
+      <h3 id="option_config">Theme option configuration</h3>
+      <p>To configure this theme properly for your site please follow below instruction.</p>
+      <p>open <code>config.hbs</code> file located in <strong>partials</strong> folder with a plain text editor (like notepad, notepad++, Sublime text etc).<br>
+      Then replace the variable's value with your own values.</p>
+      <ol>
+        <li>Set the <code>disqus_shotrname</code> value to your won Disqus shotrname. To generate a disqus shortname...
+          <ul>
+            <li>Go to disqus.com and signed up.</li>
+            <li>Then follow the instruction and add your website there from disqus.com dashboard.</li>
+            <li>You will get a dishqus shortname, copy that.</li>
+            <li>In <code>config.hbs</code> set <code>disqus_shortname = 'yourDisqusShortnameHere';</code></li>
+          </ul>
+        </li>
+        <li>Nabvar setting
+          <ul>
+            <li>set the <code>fixed_navbar</code> to either <strong>true</strong> or <strong>false</strong> for fixed navbar or normal navbar. default value is <strong>false</strong> for normal mavbar.</li>
+          </ul>
+        </li>
+        <li>Latest slider at header
+          <ul>
+            <li>Set the <code>Latest_slider_post_count</code> for mumber of post to display at the headline slider in header. Default value is 7.</li>
+          </ul>
+        </li>
+        <li>Recent post widget
+          <ul>
+            <li>Set the <code>recent_post_count</code> for number of post to display in recent post widget ( in sidebar or footer ). Default value is 3.</li>
+          </ul>
+        </li>
+
+        <li>Facebook Page settings
+          <ul>
+            <li>Set your Facebook page url <code>facebook_page_url = 'YourFacebookPageURL';</code></li>
+          </ul>
+        </li>
+        <li>Configure the mailchip signup form
+          <ul>
+            <li>Create a list on mailchimp and generate a subsscribe form. Then copy the form url and set it to <code>mailchimp_form_url = 'YourMailchimpSubscribeFormUrl';</code> <br>
+              Remember to remove <code>/post</code> from the url. For better understanding compare to the default link provided.</li>
+              <li>To genreate form url login to mailchimp. Go to list tab and open your list. Now Click on "signup forms" and then you will see 4 options for form type. Choose General forms. It will open the form builder.</li>
+
+              <li>Copy the link in the "Signup form URL" field and then paste in a new tab in your browser. it will redirect to the form itself. Then copy the link from address bar and use this link.</li>
+          </ul>
+        </li>
+        <li>Configure special tagged post in home page. There are 2 block in home page in this theme which are made for 2 special tagged posts. What this actually does? Well you have to define two tag name for these two block. Then the latest posts with those tag will be displayed in these blocks on home page. It's something like special category posts which you want to highlight on home page.
+          <ul>
+            <li>
+              Set <code>Special tag one</code> value to a tag name which you will use in your posts. Remember to use tag name as it is. If the tag name not matched then it will not work.
+            </li>
+            <li>
+              Set <code>tag_one_post_count</code> to a number. The number you define here is the number of posts which will be shown in that block. Default value is 4.
+            </li>
+          </ul>
+          <ul>
+            <li>
+              Set <code>special_tag_two</code> and <code>tag_two_post_count</code> for second block of special tagged posts. These work same as previous options but for second block of posts. Default value of <code>tag_two_post_count</code> is 5.
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <p>The <code>config.hbs</code> file will look like below.</p>
+      <pre class="prettyprint">
+&lt;script&gt;
+/*====================================================
+  THEME SETTINGS & GLOBAL VARIABLES
+====================================================*/
+//  1. Disqus comment settings
+var disqus_shortname = 'example'; // required: replace example with your forum shortname
+
+//  2. Fixed navbar
+var fixed_navbar = false;
+
+//  3. Latest slider Post count
+var Latest_slider_post_count = 7;
+
+//  4. Recent Post count
+var recent_post_count = 3;
+
+//	5. Facebook Page Setting
+var facebook_page_url = 'https://www.facebook.com/gbjsolution';
+
+//	6. Mailchimp signup form Setting
+var mailchimp_form_url = 'http://gbjsolution.us4.list-manage.com/subscribe?u=a63b2fed3ed61b70bf56d1aed&id=1e3806b1d4';
+var success_message = "Please check your inbox and confirm your email address. Thanks!";
+
+//  7. Special tag one
+var special_tag_one = 'text';
+var tag_one_post_count = 6;
+
+//  8. Special tag one
+var special_tag_two = 'feature';
+var tag_two_post_count = 5;
+&lt;/script&gt;
+      </pre>
+      <h3 id="social_links">Adding soclial links</h3>
+      <p>To add the actual socilal links to the icons in <strong>header</strong> besides the latest slider please follow the steps below</p>
+      <ul>
+        <li>open <code>social-links.hbs</code> file located in <strong>partials</strong> folder.</li>
+        <li>Now replace the <code>#</code> for each <code>href</code> value with your own profile links.</li>
+        <li>If you want to add any other icon then just copy one of the line there and only replace the <code>fa-*</code> class in that line. For list of available icons in fontawesome visit <a href="http://fontawesome.io/icons/">here</a>.</li>
+      </ul>
+      <p>The <code>social-link.hbs</code> file will look like below.</p>
+      <pre class="prettyprint">
+&lt;ul class="social-links"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-facebook"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-twitter"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="fa fa-google-plus"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+      <h3 id="widgets">Sidebar and Footer Widgets</h3>
+      <p>The sidebar is widgetized. You can move up and down or entirely remove any of theme if you wish.<br>
+      To do that you have to make very little changes in <code>sidebar.hbs</code> file which is located in <strong>partials</strong> folder.<br>
+      All the widget files are seperate in <strong>partials</strong> folder and named with prefix 'widget'. <strong>Example:-</strong> widget-facebook.hbs</p>
+      </p>Please Follow the steps below.</p>
+      <ul>
+        <li>Open <code>sidebar.hbs</code> folder and then reorder the partials call.</li>
+        <li>To hide or remove any widget in sidebar just comment out that specific widget.</li>
+        <li>To comment out any widget you need to add a <code>!</code> before <code>></code> in that widget.<br>
+        <strong>Example:-</strong> If you want to hide <code>{{> widget-twitter}}</code> then  add <code>!</code> like this <code>{{!> widget-twitter}}</code></li>
+        <li>Then save the file</li>
+      </ul>
+      <p>The <code>sidebar.hbs</code> will look like this..</p>
+      <pre class="prettyprint">
+&lt;aside class="col-md-4"&gt;
+    &lt;div class="sidebar"&gt;
+    {{&gt; widget-tagcloud}}
+    {{&gt; widget-ad}}
+    {{&gt; widget-recentpost}}
+    {{&gt; widget-facebook}}
+    {{&gt; widget-twitter}}
+    &lt;/div&gt;
+&lt;/aside&gt;
+      </pre>
+      <p>
+        Manage the footer widgets by following the same process like sidebar. Open <code>footer.hbs</code> file and then make changes you need.
+      </p>
+      <p>
+        <strong>NOTE: Do not use newsletter widget in both sidebar and footer at the same time. Use it either in footer or in sidebar.</strong>
+      </p>
+      <h3 id="twitter-settings">Twitter Widget Settings</h3>
+      Recently Twitter has changed their widget creation process. Please follow the steps below to setup the twitter widget.
+      Visit <a href="https://publish.twitter.com/">publish.twitter.com</a>
+      <ul>
+        <li>Then add your profile URL there. Example - http://www.twitter.com/gbjsolution .</li>
+        <li>Choose embeded timeline.</li>
+        <li>Click on customization option.</li>
+        <li>Set height as you wish. Around 300 to 400 looks good.</li>
+        <li>Click on Update and then copy code.</li>
+        <li>Now open "widget-twitter.hbs" file which is located in partials folder.</li>
+        <li>In place of "Add your twitter code here" in that file, add the code which you have copied from twitter's site.</li>
+        <li>Save the file and restart ghost.</li>
+      </ul>
+      <h3 id="installation">Installation</h3>
+      </p>Ones the necessary configuration is compleate then transfer the theme folder in your ghost installation server and then restart ghost.<br>
+      Now login to your admin area and go to General settings. In that page you can find the newly installed theme under theme drop down list. Select the theme there and save clicking on the save button which is at the top right corner of that page.<br>
+      Now visit your site you will see the new theme is activated.</p>
+      <p>If you want to install the demo data to make your site as the preview then you can go to lab settings and then import the <strong>daily-news.ghost.demo.json</strong> file there. This file is located in <strong>demo data</strong> folder in main download folder.</p>
+      <strong>NOTE: Enable Public API - It is required from theme version 1.1. Without enabling public API theme will not work Properly.</strong>
+      Go to lab within your dashboard. Then scroll down and at the bottom you will see an option which says "Public API - For full instructions, read the developer guide." . Enable that option by checking the box.
+      <h3 id="navigation">Navigation links</h3>
+      <p>To add links to you static page please follow the steps below.</p>
+      <ul>
+        <li>Post an article in your blog and Then select it as static page.</li>
+        <li>Copy the url for this post / page.</li>
+        <li>Go to Settings > Navigation in your admin panel.</li>
+        <li>Add a lebel and the url and save it.</li>
+        <li>Now the theme will show newly added link in navigation.</li>
+      </ul>
+      <h3 id="featured_media">Featured Media in post</h3>
+      <p>Ghost supports featured/cover image in post nativly, and this theme handel that nicely.</p>
+      <p>If you want to add any embeded media like youtube video, vimeo video, soundcloud music or any other embeded iframe as featured media in your post then you have to wrape that in <code>&lt;featured&gt;Your Embed code here...&lt;/featured&gt;</code> tag while writing the post. This embeded featured media will be shown at the place of cover image in full post view.Also set a cover image to display in homepage or other post listing page.</p>
+      <p>An example of youtube video below...</p>
+      <pre class="prettyprint">
+&lt;featured&gt;&lt;iframe width="560" height="315" src="//www.youtube.com/embed/Uz2P2WdSzyo" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;&lt;/featured&gt;
+      </pre>
+      <p>
+        <strong>NOTE: If you usa a blog cover, it will be shown as site's background image.</strong>
+      </p>
+      <hr>
+      <h2>Theme Customization</h2>
+      <h3 id="change_color">How to Change Color</h3>
+      <p>To change the Theme color pleae follow the steps below.</p>
+      <ul>
+        <li>First of all you need a LESS compiler. If you are on Windows, use Win Less. For mac you can use Less.app or anything else you prefer to use.</li>
+        <li>Add the css folder of your theme (located in /assets/) to less compiler.</li>
+        <li>Open the <code>variables.less</code> file in your code editor. This file is located in <strong>assets/css/less_parts</strong> folder.</li>
+        <li>Now you have to change the color hexcode (#xxxxxx) in this file and save the file.</li>
+        <li>Now compile the <code>screen.less</code> file using less compiler. This file is located in <strong>assets/css</strong> folder. This will rebuild the <code>screen.css</code> file.</li>
+        <li>At last Update the files in your server and restart ghost.</li>
+      </ul>
+      <p>The <code>variables.less</code> file looks like below.</p>
+      <pre class="prettyprint">
+/*====================================================
+	COLOR VARIABLE FOR THEME
+====================================================*/
+@theme-color: #FF4444;			// Primary color
+@theme-color-secondary: #343334;		// Primary color
+@text-color: #707070;			// Primary text color
+@text-color-light: #b0b0b0;		// Light text color
+@text-color-dark: #393939;		// Dark text color
+@bg-color: #f0f0f0;			// Background color
+@dark-bg: #101010;			// Dark background color
+@light-bg: #fafafa;			// Light background color
+@border-color: #f0f0f0;		        // Border color
+@black: #000000;				// Pure black
+@white: #FFFFFF;				// Pure White
+      </pre>
+
+      <!-- changelog -->
+      <h2 id="changelog">Changelog</h2>
+      <h3>V 1.2 5th August, 2016</h3>
+      <ul>
+        <li>Rewrite some javascript to use Ghost API instead of RSS feed. <strong>Now enabling public API under lab settings is required.</strong></li>
+        <li>Modified tag cloud widget using ghost's get helper to show all available tags.</li>
+        <li>Changed Twitter widget to use twitter's new widget code. Removed Twitter settings from <code>config.hbs</code>.</li>
+      </ul>
+      <h3>V 1.1 - 17th December, 2015</h3>
+      <ul>
+        <li>Fixed fix navbar display issue in Internet Explorer</li>
+        <li>Fixed, tag cloud, recent post etc. various features broken in Ghost - 0.7.3</li>
+      </ul>
+      <h3>V 1.0 - 19th September, 2015</h3>
+      <ul>
+        <li>Initial release</li>
+      </ul>
+
+      <!-- start Sources and Credits -->
+      <hr>
+      <h2>Source and Credits</h2>
+      The fonts, scripts, images or other files used in this theme are listed below.
+      <h3 id="font">Font</h3>
+      <li><a href="http://www.google.com/fonts/specimen/Open+Sans" target="_blank">Open Sans</a></li>
+      <li><a href="http://fontawesome.io/" target="_blank">Fontawesome icon font</a></li>
+      <h3 id="scripts">Scripts</h3>
+      <li><a href="http://getbootstrap.com/" target="_blank">Bootstrap 3.3.5</a></li>
+      <li><a href="http://owlgraphic.com/owlcarousel/index.html" target="_blank">Owl Carousel</a></li>
+      <li><a href="http://fitvidsjs.com/" target="_blank">Fitvids</a></li>
+      <li><a href="https://highlightjs.org/" target="_blank">Highlight js</a></li>
+      <li><a href="https://highlightjs.org/" target="_blank">Highlight js</a></li>
+      <li><a href="https://github.com/jamalneufeld/ghostHunter" target="_blank">GhostHunter</a></li>
+      <h3 id="images">Images</h3>
+      <li>Preview Images form <a href="https://pixabay.com/" target="_blank">pixabay.com</a></li>
+      <!-- end Sources and Credits -->
+    </div>
+  </div>
+</section>
+<section class="vibrant">
+  <div class="container">
+    <p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+
+<p class="signature">Happy Blogging<br>
+Best Regards<br>
+Biswajit Saha<br>
+</p>
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <p> &copy; 2016 GBJ solution - All Rights Reserved</p>
+  </div>
+</footer>
+<script src="assets/js/jquery.min.js"></script>
+
+<script type="text/javascript" src="assets/js/prettify/prettify.js"></script>
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=css&skin=sunburst"></script>
+<script src="assets/js/layout.js"></script>
+ <script src="assets/js/jquery.localscroll-1.2.7.js" type="text/javascript"></script>
+ <script src="assets/js/jquery.scrollTo-1.4.3.1.js" type="text/javascript"></script>
+</body>
+</html>

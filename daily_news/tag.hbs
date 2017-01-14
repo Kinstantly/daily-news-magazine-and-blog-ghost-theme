@@ -1,0 +1,99 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{> cover-tag}}
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="row default-layout">
+			{{#foreach posts}}
+			{{#if @first}}
+			<!-- start post -->
+			<article class="col-sm-12 post-wrap first-post">
+				<div class="featured-media">
+					{{#if image}}
+					<a href="{{url}}" title="{{{title}}}">
+						<div class="image-container" style="background-image: url({{image}});">
+						</div>
+					</a>
+					{{/if}}
+					{{#if "tags"}}
+					<div class="tag-list">{{tags separator=""}}</div>
+					{{/if}}
+					{{#if featured}}
+                    <div class="featured"><i class="fa fa-star"></i>Featured</div>
+                    {{/if}}
+				</div>
+				
+				<h2 class="title h3"><a href="{{url}}">{{{title}}}</a></h2>
+				<div class="post-meta">
+					{{#author}}
+					<span class="author">
+	                    <i class="fa fa-user"></i>
+	                    <a href="{{url}}">{{name}}</a>
+	                </span>
+	                {{/author}}
+	                <span class="date">
+	                    <i class="fa fa-calendar-o"></i>
+	                    {{date format="MMM DD, YYYY"}}
+	                </span>
+	                <span class="comment">
+	                    <i class="fa fa-comment-o"></i>
+	                    <a href="{{url}}#disqus_thread">0 Comments</a>
+	                </span>
+				</div>
+				<div class="post-entry">
+					{{excerpt}}
+				</div>
+				<a class="permalink" href="{{url}}">Read More...</a>
+			</article>
+			<!-- end post -->
+			{{else}}
+			<!-- start post -->
+			<article class="col-sm-6 post-wrap">
+				<div class="featured-media">
+					{{#if image}}
+					<a href="{{url}}" title="{{{title}}}">
+						<div class="image-container" style="background-image: url({{image}});">
+						</div>
+					</a>
+					{{/if}}
+					{{#if "tags"}}
+					<div class="tag-list">{{tags separator=""}}</div>
+					{{/if}}
+					{{#if featured}}
+                    <div class="featured"><i class="fa fa-star"></i>Featured</div>
+                    {{/if}}
+				</div>
+				
+				<h2 class="title h3"><a href="{{url}}">{{{title}}}</a></h2>
+				<div class="post-meta">
+					{{#author}}
+					<span class="author">
+	                    <i class="fa fa-user"></i>
+	                    <a href="{{url}}">{{name}}</a>
+	                </span>
+	                {{/author}}
+	                <span class="date">
+	                    <i class="fa fa-calendar-o"></i>
+	                    {{date format="MMM DD, YYYY"}}
+	                </span>
+	                <span class="comment">
+	                    <i class="fa fa-comment-o"></i>
+	                    <a href="{{url}}#disqus_thread">0 Comments</a>
+	                </span>
+				</div>
+				<div class="post-entry">
+					{{excerpt}}
+				</div>
+				<a class="permalink" href="{{url}}">Read More...</a>
+			</article>
+			<!-- end post -->
+			{{/if}}
+			{{/foreach}}
+			</div>
+			{{pagination}}
+		</div>
+		{{> sidebar}}
+	</div>
+</div>

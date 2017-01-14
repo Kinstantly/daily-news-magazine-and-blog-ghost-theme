@@ -1,0 +1,71 @@
+{{!< default}}
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+<!-- start main content area -->
+<div class="container">
+	<!-- start big margin -->
+	<div class="row big-margin">
+		{{#foreach posts}}
+		{{#if @first}}
+	    	<div class="col-sm-6">
+	    		<div class="post-wrap first-post {{post_class}}">
+	    			<div class="featured-media">
+		    			<a href="{{url}}" title="{{{title}}}">
+							<div class="image-container" {{#if image}} style="background-image: url({{image}});" {{/if}}>
+							</div>
+						</a>
+						{{#if "tags"}}
+						<div class="tag-list">
+							{{tags separator=""}}
+						</div>
+						{{/if}}
+						<div class="title-wrap">
+							<a href="{{url}}">
+								<h2 class="h4 title">{{{title}}}</h2>
+							</a>
+						</div>
+						{{#if featured}}
+	                    <div class="featured"><i class="fa fa-star"></i>Featured</div>
+	                    {{/if}}
+					</div>
+				</div>
+			</div>
+	    {{else}}
+	    	<div class="col-md-3 col-sm-6">
+	    		<div class="post-wrap {{post_class}}">
+	    			<div class="featured-media">
+		    			<a href="{{url}}" title="{{{title}}}">
+		    				<div class="image-container" {{#if image}} style="background-image: url({{image}});" {{/if}}>
+							</div>
+						</a>
+						{{#if "tags"}}
+						<div class="tag-list">
+							{{tags separator=""}}
+						</div>
+						{{/if}}
+						<div class="title-wrap">
+							<a href="{{url}}">
+								<h2 class="h5 title">{{{title}}}</h2>
+							</a>
+						</div>
+						{{#if featured}}
+	                    <div class="featured"><i class="fa fa-star"></i>Featured</div>
+	                    {{/if}}
+					</div>
+				</div>
+			</div>
+	    {{/if}}
+	    {{/foreach}}
+	</div>
+	<!-- end big margin -->
+	<div class="row">
+		<div class="col-md-8">
+			<div  id ="category-container">
+				<!-- here special categorized posts will be added -->
+			</div>
+			{{pagination}}
+		</div>
+		{{> sidebar}}
+	</div>
+</div>
+<!-- end main content area -->

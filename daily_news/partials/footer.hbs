@@ -1,0 +1,49 @@
+	<footer class="main-footer">
+		<div class="footer-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+						{{> widget-text}}
+					</div>
+					<div class="col-sm-4">
+						{{> widget-tagcloud}}
+					</div>
+					<div class="col-sm-4">
+						{{> widget-newsletter}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-10 copyright">
+						 &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>. All right Reserved - Powered by <a href="http://ghost.org" target="blank">Ghost</a>
+					</div>
+					<div class="col-sm-2">
+						<div class="feed-link-wrap">
+							<a href="{{@blog.url}}/rss/"><i class="fa fa-rss-square"></i> Subscribe</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+<a href="#" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+{{! insert search popup partial}}
+{{> search-popup}}
+{{ghost_foot}}
+<script type="text/javascript">
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="{{asset "js/bootstrap.min.js"}}"></script>
+	<script src="{{asset "js/plugins.js"}}"></script>
+	<script src="{{asset "js/main.js"}}"></script>

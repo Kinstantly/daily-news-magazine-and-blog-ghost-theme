@@ -1,0 +1,29 @@
+<!-- start about the author -->
+{{#author}}
+<div class="about-author col-sm-12 clearfix">
+	{{#if image}}
+		<a href="{{url}}" title="{{name}}"><img src="{{image}}" alt="Author image" class="avatar pull-left"></a>
+		{{else}}
+		<a href="{{url}}" title="{{name}}"><img src="{{asset "images/default-user-image.jpg"}}" alt="Author image" class="avatar pull-left"></a>
+	{{/if}}
+	<div class="details">
+		<div class="author">
+			<a href="{{url}}" class="h4">{{name}}</a>
+		</div>
+		{{#if bio}}
+		<div class="bio">
+			{{bio}}
+		</div>
+		{{/if}}
+		<div class="meta-info">
+			{{#if location}}
+			<span class="loaction"><i class="fa fa-map-marker fa-fw"></i>{{location}}</span>
+			{{/if}}
+			{{#if website}}
+			<span class="website"><a href="{{website}}" targer="_BLANK"><i class="fa fa-link fa-fw"></i>Website</a></span>
+			{{/if}}
+		</div>
+	</div>
+</div>
+{{/author}}
+<!-- end about the author -->
